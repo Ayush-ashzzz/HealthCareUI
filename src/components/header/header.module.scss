@@ -1,0 +1,144 @@
+.header {
+  position: relative;
+  z-index: 10;
+  background: #fff;
+}
+
+.navbar {
+  width: min(1200px, calc(100% - 48px));
+  min-height: 104px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.brand {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  width: 230px;
+  max-width: 100%;
+  height: 76px;
+  object-fit: contain;
+}
+
+.anchor {
+  color: #111;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus-visible {
+    color: #007bff;
+  }
+}
+
+.anchorbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #111;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+  white-space: nowrap;
+
+  .pageText {
+    color: inherit;
+  }
+
+  .arrow {
+    display: block;
+    width: 12px;
+    height: 12px;
+  }
+
+  .dropdownMenu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    min-width: 170px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+
+    a {
+      display: block;
+      padding: 10px 15px;
+      color: black;
+      text-decoration: none;
+      font-size: 15px;
+
+      &:hover,
+      &:focus-visible {
+        background: #f2f2f2;
+        color: #007bff;
+      }
+    }
+  }
+
+  &:hover .dropdownMenu,
+  &:focus-within .dropdownMenu {
+    display: block;
+  }
+
+  &:hover .pageText,
+  &:focus-within .pageText {
+    color: #007bff;
+  }
+}
+
+@media (max-width: 920px) {
+  .navbar {
+    min-height: 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 0 18px;
+  }
+
+  .logo {
+    height: 64px;
+  }
+
+  .anchorbar {
+    justify-content: center;
+    column-gap: 18px;
+    row-gap: 14px;
+  }
+}
+
+@media (max-width: 520px) {
+  .navbar {
+    width: calc(100% - 32px);
+  }
+
+  .anchorbar {
+    column-gap: 14px;
+  }
+
+  .anchor,
+  .dropdown {
+    font-size: 14px;
+  }
+}

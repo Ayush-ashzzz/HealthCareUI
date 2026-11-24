@@ -1,0 +1,20 @@
+.txtcontainer {
+     width: min(1200px, calc(100% - 48px));
+     margin: 0 auto 32px;
+     display: flex;
+     align-items: flex-end;
+     justify-content: space-between;
+     gap: 24px;
+}
+.txtbutton{
+    flex: 0 0 auto;
+}
+
+@media (max-width: 600px) {
+    .txtcontainer {
+        width: calc(100% - 32px);
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+}

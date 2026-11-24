@@ -1,0 +1,107 @@
+.banner{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.hero{
+    position: relative;
+}
+.button{
+   position: absolute;
+    bottom: max(100px, 14%);
+    left: max(5%, calc((100% - 1200px) / 2));
+    z-index: 2;
+}
+.aboutus{
+    position: relative;
+   
+}
+.more{
+    position: absolute;
+    left: max(24px, calc((100% - 1200px) / 2));
+    bottom: 10%;
+}
+.bannerpic{
+    display: block;
+    width: 100%;
+}
+.infoSection{
+    width: min(90%, 1200px);
+    margin: -90px auto;
+    position: relative;
+    z-index: 1;
+}
+.infoContainer{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    padding: 26px 30px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(14, 48, 91, 0.08);
+}
+.infoItem{
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    min-width: 0;
+}
+.icon{
+    flex: 0 0 48px;
+    height: 48px;
+    width: 48px;
+    object-fit: contain;
+}
+.infoContent{
+    min-width: 0;
+
+    h2{
+        margin: 0 0 7px;
+        font-size: 18px;
+        line-height: 1.25;
+    }
+
+    p{
+        margin: 0 0 12px;
+        color: #4e5968;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    a{
+        color: #0878ed;
+        font-size: 12px;
+        font-weight: 700;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+}
+
+@media (max-width: 900px){
+    .infoContainer{
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+}
+
+@media (max-width: 600px){
+    .button{
+        bottom: max(64px, 14%);
+        left: 16px;
+    }
+
+    .more{
+        left: 16px;
+        bottom: 8%;
+    }
+
+    .infoSection{
+        width: calc(100% - 32px);
+        margin: -48px auto;
+    }
+
+    .infoContainer{
+        gap: 18px;
+        padding: 22px 18px;
+    }
+}
